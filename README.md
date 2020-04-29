@@ -22,14 +22,14 @@ Chord makes it possible to look up any particular key in log(n) time. Chord empl
 
 The Chord supports uninformed disconnection/failure of Nodes by continously pinging its successor Node. On detecting failed Node, the Chord will self stabilize. Files in the network are also replicated to the successor Node, so in case a Node goes down while another Node is downloading from it, the latter Node will be redirected to its successor.
 
-## Node.py Program
+## Fadvance_node.py Program
 
 Since this is a decentralized system, there are no separate server and client scripts. Instead each Node.py script acts as both a server and a client therefore allowing p2p connections to other Nodes.
 Any Node can join the network but initially it must know the IP and Port of another Node that is already part of the Chord network.
 
-To Node.py requires command line arguments in the form:  python Node.py *IP* *Port*  
+The Fadvance_node.py requires command line arguments in the form:  python Fadvance_node.py *IP* *Port*  
 For example:
-```python Node.py 127.0.0.1 5000```
+```python Fadvance_node.py 127.0.0.1 5000```
 
 All subsequent Nodes also start in the same way.  
 **Remember**: A Node can have the same IP as another, but not the same IP **and** same Port.
@@ -40,7 +40,7 @@ All subsequent Nodes also start in the same way.
 
 The first Node of the Chord network will be initialized in same way as stated above.  
 To reiterate, we begin in the Node.py directory and run the command:  
-```python Node.py 127.0.0.1 5000```  
+```python Fadvance_node.py 127.0.0.1 5000```  
 Lets call this Node 1 for this example.
 
 You start one or more subsequent Nodes in the same way by providing each with an IP Port combination. Lets call them Node 2, Node 3 and so on.
